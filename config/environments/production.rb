@@ -15,7 +15,14 @@ Myrottenpotatoes::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  # config.assets.compile = false
+
+  # code added as per ELLS
+  # in config/environments/production.rb:
+  # BEFORE - what 'rails new' generates for production.rb (around l.18):
+  # config.assets.compile = false
+  # AFTER - this is what you should change it to:
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
